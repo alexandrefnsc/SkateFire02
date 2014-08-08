@@ -1,0 +1,4 @@
+.col-md-3.content-related
+	= link_to [@category, related_product] do
+		= img related_product.image.small, class: 'thumbnail'
+		h2 = related_product.title

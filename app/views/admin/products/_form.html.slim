@@ -1,0 +1,16 @@
+= simple_form_for([:admin, @product]) do |f|
+	= f.error_notification
+
+	.form-inputs
+		= f.uploads_one :image, preview: :regular
+		= f.input :title
+		= f.input :price
+		= f.association :brand, prompt: 'Selecione'
+		= f.association :category, prompt: 'Selecione'
+		= f.input :body
+		= f.input :description
+		= f.input :buyit
+
+	.form-actions
+		= f.button :submit, class: 'btn btn-success'
+

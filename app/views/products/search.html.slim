@@ -1,0 +1,8 @@
+- @products.each do |product|
+	.col-sm-6.col-md-4
+		= link_to [product.category, product] do
+			.thumbnail.content-product  id="content-post"
+				.content-img
+					= img product.image.small if product.image?
+				.article-inner
+					h3 = product.title

@@ -1,0 +1,9 @@
+.content-blog.container
+	.header-blog
+		h1 Fortalecendo a Cena
+	- @posts_destaques.each do |post|
+		.content-article.col-sm-6.col-md-4
+			= link_to post do
+				.thumbnail.content.blog
+					 	= img post.image.small if post.image?
+
