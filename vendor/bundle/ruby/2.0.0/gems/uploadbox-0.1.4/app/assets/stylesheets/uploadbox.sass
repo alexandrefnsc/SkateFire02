@@ -1,0 +1,186 @@
+@import bootstrap/progress
+
+.uploadbox-image-uploader
+  position: relative
+
+  .btn
+    background-color: #f7f7f7
+    text-align: center
+    text-decoration: none
+    box-sizing: border-box
+
+  .fileupload
+    &:before
+      box-sizing: border-box
+      z-index: 5
+      font-size: 10px
+      line-height: 12px
+      display: block
+      text-align: center
+      font-weight: 500
+      color: #fff
+      background-color: rgba(#000, .6)
+      padding: 2px
+      position: absolute
+      width: 100%
+      top: 10px
+
+    &.uploading:before
+      content: 'Enviando'
+
+    &.processing:before
+      content: 'Processando'
+
+
+  .fileupload-new .btn.fileupload-exists
+    display: none
+
+  .fileupload-new .btn-file
+    background: #f7f7f7
+
+  .clearfix
+    *zoom: 1
+    &:before
+      display: table
+      content: ""
+      line-height: 0
+    &:after
+      display: table
+      content: ""
+      line-height: 0
+      clear: both
+
+  .hide-text
+    font: 0/0 a
+    color: transparent
+    text-shadow: none
+    background-color: transparent
+    border: 0
+
+  .input-block-level
+    display: block
+    width: 100%
+    min-height: 30px
+    box-sizing: border-box
+
+  .btn-file
+    overflow: hidden
+    position: relative
+    vertical-align: middle
+    display: block
+    background: transparent
+    > input
+      position: absolute
+      top: 0
+      right: 0
+      margin: 0
+      opacity: 0
+      filter: alpha(opacity = 0)
+      transform: translate(-300px, 0) scale(4)
+      font-size: 23px
+      direction: ltr
+      cursor: pointer
+      width: 100%
+
+    .fileupload-exists
+      margin-left: -9999px
+
+    .fileupload-new
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-top: -14px
+      margin-left: -39px
+      display: inline-block
+      background: #e5e5e5
+      font-size: 11px
+      color: #111
+      padding: 5px 15px
+      border-radius: 20px
+
+  .fileupload
+    position: relative
+    background-color: #eee
+    text-align: center
+    .uneditable-input
+      display: inline-block
+      margin-bottom: 0px
+      vertical-align: middle
+      cursor: text
+    .btn
+      vertical-align: middle
+
+  .fileupload-exists .fileupload-new, .fileupload-new .fileupload-exists
+    display: none
+
+  .fileupload-inline .fileupload-controls
+    display: inline
+
+  .fileupload-new .input-append .btn-file
+    border-radius: 0 3px 3px 0
+
+  .control-group
+    &.warning .fileupload
+      .uneditable-input
+        color: #a47e3c
+        border-color: #a47e3c
+      .fileupload-preview
+        color: #a47e3c
+    &.error .fileupload
+      .uneditable-input
+        color: #b94a48
+        border-color: #b94a48
+      .fileupload-preview
+        color: #b94a48
+    &.success .fileupload
+      .uneditable-input
+        color: #468847
+        border-color: #468847
+      .fileupload-preview
+        color: #468847
+
+  .fileupload-new .fileupload-preview
+    display: none
+
+  .fileupload-preview
+    text-align: center
+
+  .fileupload-remove
+    position: absolute
+    top: 0
+    right: 0
+
+  .fileupload-actions
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+
+  .progress
+    height: 10px
+    width: 100%
+    margin-bottom: 0
+    border-radius: 0
+    position: absolute
+    z-index: 5
+    top: 0
+    left: 0
+
+  .btn.fileupload-exists
+    position: absolute
+    top: -10px
+    right: -10px
+    z-index: 3
+    padding: 0
+    border-radius: 100%
+    width: 20px
+    height: 20px
+    line-height: 20px
+    font-size: 16px
+    background: lighten(black, 20%)
+    color: darken(white, 20%)
+    display: block
+    border: 0
+    &:hover
+      background: black
+      color: white

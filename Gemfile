@@ -3,9 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.3.9', :group => :development
-gem "pg", :group => :production
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -33,6 +31,8 @@ group :development do
 	gem 'xray-rails', '~> 0.1.14'
 	#SPRING - RAILS
 	gem 'spring', '~> 1.1.3'
+	#MySQL - RAILS
+	gem 'sqlite3', '~> 1.3.9'
 end
 
 #TRADUÇAO STARAE
@@ -50,4 +50,9 @@ gem 'normalize-rails', '~> 3.0'
 
 #PAGSEGURO
 gem "pagseguro-oficial"
+
+# GEM PG - HEROKU
+group :production do
+	gem 'pg'
+end
 
