@@ -1,0 +1,41 @@
+header
+	.menu.nav
+		ul.iconsSocial
+			li
+				a href='#'
+					= image_tag 'iconFacebook.png'
+			li
+				a href='#'
+					= image_tag 'iconTwitter.png'
+			li
+				a href='#'
+					= image_tag 'iconYoutube.png'
+			li
+				a href='#'
+					= image_tag 'iconInstagram.png'
+			li
+				a href='#'
+					= image_tag 'iconWhatsapp.png'
+
+		ul.loginUser
+			li class='disabled'
+				a href='#' LOGIN
+			li
+				a href='#' CADASTRE-SE
+
+.content-menu-home.container
+	.contentLogoSearch
+		.logo.col-md-3
+			= image_tag 'logoSkateFire.png'
+		.content-search.col-md-9
+			div id='info-contato' class='col-md-4'
+				span class="entypo-phone "
+				div id='info-numero'
+					<h3>  (61) 3451-1023</h3>
+					p 2ª a 6ª das 9h às 18h
+			div id='search-bar' class='col-md-8'
+				= form_tag search_path, :method => 'get', :html=>{class: "navbar-form", id: "serch-home-form"} do
+					.form-group
+							= text_field_tag :search, params[:search], class: 'input form-control', placeholder: "Pesquisa", type: "text", id: 'search-home-bar'
+							button.btn.btn-danger type="submit" style=" padding: 9px 22px; " <span class="entypo-search"></span>
+

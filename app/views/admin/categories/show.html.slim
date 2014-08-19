@@ -1,0 +1,10 @@
+- if notice
+	.alert.alert-info.alert-dismissable
+		button type="button" class="close" data-dismiss="alert" aria-hidden="true" &times;
+		= notice
+
+.contentShow
+	h1
+		= @category.name
+		.pull-right
+			= link_to 'Editar', edit_admin_category_path(@category), class: 'btn btn-default btn-sm'

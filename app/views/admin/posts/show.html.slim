@@ -1,0 +1,24 @@
+- if notice
+	.alert.alert-info.alert-dismissable
+		button type="button" class="close" data-dismiss="alert" aria-hidden="true" &times;
+		= notice
+
+.contentShow
+	h1
+		= @post.title
+		.pull-right
+			= link_to 'Editar', edit_admin_post_path(@post), class: 'btn btn-default btn-sm'
+			= link_to 'Back', admin_posts_path, class: 'btn btn-default btn-sm'
+	br
+	.pull-right
+		= l @post.created_at
+	br
+	hr
+	= img @post.image.regular if @post.image?
+	hr
+	h4 Sumário
+	= simple_format @post.summary
+	hr
+	h4 Texto
+	= simple_format @post.body
+

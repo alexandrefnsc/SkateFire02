@@ -1,0 +1,12 @@
+= simple_form_for([:admin, @post]) do |f|
+		= f.error_notification
+
+		.form-inputs
+				= f.uploads_one :image, preview: :regular
+				= f.input :title
+				= f.input :summary
+				= f.input :body
+				= f.input :created_at
+
+		.form-actions
+				= f.button :submit, class: 'btn btn-success'

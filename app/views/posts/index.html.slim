@@ -1,0 +1,9 @@
+- @posts.each do |post|
+	.col-sm-6.col-md-4
+		= link_to post do
+			.thumbnail.content-product  id="content-post"
+				.content-img
+					= img post.image.small if post.image?
+				.article-inner
+					h3 = post.title
+					p = truncate(post.summary, length: 80)

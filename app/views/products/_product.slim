@@ -1,0 +1,9 @@
+.col-sm-6.col-md-4
+	= link_to [@category, product] do
+		.thumbnail.content-product style='overflow: hidden'
+			.content-img
+				= img product.image.small if product.image?
+			.article-inner
+				h3 = product.title
+				btn.btn-primary.btn-lg = number_to_currency(product.price)
+				h6 ou em até 6x sem juro

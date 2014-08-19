@@ -1,0 +1,51 @@
+pt-BR:
+  simple_form:
+    yes: Sim
+    no: Não
+    required:
+      text: obrigatório
+      mark: "*"
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: "<abbr title="required">*</abbr>"
+    error_notification:
+      default_message: "Por favor, corrija os problemas abaixo:"
+    # Labels and hints examples
+    labels:
+      defaults:
+        password: Senha
+        password_confirmation: Confirme sua senha
+        name: Nome
+      product:
+        title: Título
+        body: Texto
+        description: Descrição
+        brand: Marca
+        buyit: Compre Agora
+        category: Categoria
+        price: Preço
+      brand:
+        title: Marca
+      post:
+        title: Título
+        body: Texto
+        category: Categoria
+        created_at: Criado em
+    # hints:
+    #   defaults:
+    #     password: 'Mínimo de 8 caracteres.'
+    # placeholders:
+    #   defaults:
+    #     name: 'Nome'
+    #     password: '****'
+  helpers:
+    submit:
+      product:
+        create: 'Criar produto'
+        update: 'Atualizar produto'
+      brand:
+        create: 'Criar marca'
+        utpdate: 'Atualizar marca'
+      admin:
+        create: 'Criar admin'
+        utpdate: 'Atualizar admin'

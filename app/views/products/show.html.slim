@@ -1,0 +1,26 @@
+.content-products
+	h1 
+		= @product.title	
+		.pull-right
+			.btn.btn-success.btn-lg style='margin-right:5px'
+				= number_to_currency(@product.price)
+
+	strong = @product.brand.name
+hr
+	- if @product.image?
+		= img @product.image.regular, class: 'thumbnail'
+
+	= simple_format @product.body
+hr
+	strong Descrição
+	= simple_format @product.description
+hr
+	strong COMPRE AGORA
+	= simple_format @product.buyit
+hr
+#sidebar
+	.content-related_products
+		section.category
+			h1 Você pode curtir também
+			= render partial: 'related_product', collection: @related_products
+

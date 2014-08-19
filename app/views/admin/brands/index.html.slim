@@ -1,0 +1,21 @@
+h1 Lista de marcas
+
+table.table.table-striped
+  thead
+    tr
+      th Título
+      th
+
+  tbody
+    - @brands.each do |brand|
+      tr
+        td = brand.name
+        td
+          .btn-group.pull-right
+            = link_to 'Mostrar', [:admin, brand], class: 'btn btn-default btn-sm'
+            = link_to 'Editar', edit_admin_brand_path(brand), class: 'btn btn-default btn-sm'
+            = link_to 'Excluir', [:admin, brand], data: {:confirm => 'Tem certeza?'}, :method => :delete, class: 'btn btn-default btn-sm'
+
+br
+
+= link_to 'Nova marca', new_admin_brand_path, class: 'btn btn-primary'

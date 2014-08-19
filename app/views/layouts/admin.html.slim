@@ -1,0 +1,38 @@
+doctype html
+html
+	head
+		title SkateFire02
+		= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track' => true
+		= javascript_include_tag 'admin', 'data-turbolinks-track' => true
+		= csrf_meta_tags
+
+	body
+		- if user_signed_in?
+			.navbar-admin.navbar.navbar-inverse.navbar-fixed-top role="navigation"
+				.container
+					.navbar-header
+						button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button"
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand href="#" style='color: #fff'  Skate Fire
+					.collapse.navbar-collapse
+						ul.nav.navbar-nav
+							li =link_to 'Produtos', admin_products_path
+							li =link_to 'Marcas', admin_brands_path
+							li =link_to 'Categorias', admin_categories_path
+							li =link_to 'Blog', admin_posts_path
+							li =link_to 'Usuários', admin_users_path
+						ul.nav.navbar-nav.pull-right
+							li =link_to 'Sair', destroy_user_session_path, method: :delete
+				/! /.nav-collapse
+
+		.content-corpo.container
+			= yield
+		.footer
+			.content-footer.container
+				.pull-right
+					- if user_signed_in?
+						= current_user.name
+

@@ -1,0 +1,10 @@
+- if notice
+	.alert.alert-info.alert-dismissable
+	  button type="button" class="close" data-dismiss="alert" aria-hidden="true" &times;
+	  = notice
+
+.contentShow
+	h1
+		= @brand.name
+		.pull-right
+			= link_to 'Edit', edit_admin_brand_path(@brand), class: 'btn btn-default btn-sm'

@@ -1,0 +1,24 @@
+- if notice
+  .alert.alert-info.alert-dismissable
+    button type="button" class="close" data-dismiss="alert" aria-hidden="true" &times;
+    = notice
+
+.contentShow
+  h1
+    = @product.title
+    .pull-right
+      .btn.btn-success.btn-lg style='margin-right:5px'
+        = number_to_currency(@product.price)
+      = link_to 'Editar', edit_admin_product_path(@product), class: 'btn btn-default btn-sm'
+  hr
+  = img @product.image.regular if @product.image?
+  hr
+  = simple_format @product.body
+hr
+.contentShow
+  h1 Descrição
+  = simple_format @product.description
+hr
+.contentShow
+  h1 Compre Agora
+  = simple_format @product.buyit
