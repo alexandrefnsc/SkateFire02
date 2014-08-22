@@ -54,7 +54,10 @@ gem "pagseguro-oficial"
 # GEM PG - HEROKU
 group :production do
 	gem 'pg'
+<<<<<<< HEAD
 	gem 'thin'
 	gem 'rails_12factor'
+=======
+>>>>>>> 209c2987c1182d23b61e26f2605eb0e51a835cb1
 end
 
