@@ -8,4 +8,4 @@
 
 #CADASTRO DE USUARIO
 User.destroy_all
-User.create(name: 'admin', email:'admin@admin.com.br', password:'123123123')
+User.create!(name: 'admin', email: 'admin@admin.com.br', password: '123123123', password_confirmation: '123123123')
