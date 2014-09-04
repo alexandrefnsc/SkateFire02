@@ -1,5 +1,6 @@
 //= require jquery
 //= require jquery_ujs
+//= require jquery.bxslider
 
 $(document).ready(function() {
 
@@ -13,7 +14,7 @@ $(document).ready(function() {
 	}, function() {
 		$(this).css({
 			'box-shadow': 'none'
-			})	
+			})
 	})
 
 	// CONTENT RELATED PRODUCT
@@ -39,7 +40,10 @@ $(document).ready(function() {
 	}, function() {
 		$(this).css({
 			'opacity':0.7
-			})	
+			})
 	})
+
+	//BX SLIDER
+	$('.bxslider').bxSlider();
 
 });
