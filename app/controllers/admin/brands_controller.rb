@@ -7,7 +7,7 @@ class Admin::BrandsController < ApplicationController
   # GET /brands
   # GET /brands.json
   def index
-    @brands = Brand.all
+    @brands = Brand.order(:name)
   end
 
   # GET /brands/1
